@@ -68,12 +68,7 @@ std::string getEnvVarValue(const char* envVarName) {
     }
 }
 
-char* getEnvVarValue2(const char* envVarName) {
-    char* buf = nullptr;
-    size_t sz = 0;
-    if (_dupenv_s(&buf, &sz, envVarName) == 0 && buf != nullptr)
-        return buf;
-}
+
 
 bool caseInsensitiveCompare(const std::string& str1, const std::string& str2) {
     // Convert both strings to lowercase for case-insensitive comparison
